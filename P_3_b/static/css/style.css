@@ -1,0 +1,67 @@
+/* style.css */
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+p {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a {
+  color: #0074e4; /* Blue color */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  color: #ff6600; /* Orange color on hover */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto; /* Center horizontally */
+}
+
+@media screen and (max-width: 768px) {
+  p {
+      font-size: 14px;
+  }
+}
+
+.box {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #0074e4;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff6600;
+}
+
+.button {
+  background-color: #0074e4;
+  color: #fff;
+}
+
+#header {
+  font-size: 24px;
+}
+
+.map-container, .chart-container {
+  width: 50%; /* Adjust the width */
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
