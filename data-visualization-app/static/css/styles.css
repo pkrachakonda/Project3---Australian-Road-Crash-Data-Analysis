@@ -1,0 +1,12 @@
+.chart-container {
+    width: 650px;
+    margin: auto;
+}
+
+/* Add styles for the dropdown filters */
+select {
+    display: block;
+    margin: 10px auto;
+}
+
+/* add more styles for filters as needed */

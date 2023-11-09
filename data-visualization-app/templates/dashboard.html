@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Visualization Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest"></script>
+</head>
+<body>
+    <label for="yearDropdown">Select Year:</label>
+    <select id="yearDropdown">
+        <option value="all">All Years</option>
+    </select>
+
+    <div id="loadingText" style="display: none;">Loading...</div>
+    <div id="error" style="display: none;"></div>
+
+    <div class="chart-container">
+        <canvas id="roadUserChart"></canvas>
+        <canvas id="fatalitiesChart"></canvas>
+        <canvas id="stateChart"></canvas>
+    </div>    
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

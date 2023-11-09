@@ -1,0 +1,8 @@
+Open your gitbash from within this folder (where app.py is). 
+
+(type this) source venv/Scripts/activate (hit enter)
+
+Now (VENV) virtual environment will run. 
+
+(type this) python app.py (hit enter) 
+
