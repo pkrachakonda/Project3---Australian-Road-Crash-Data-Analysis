@@ -69089,7 +69089,7 @@ var crashData = {
 }
 
 
-
+// Initialising map element
 var map = L.map('map');
     
     // Adjust the initial view coordinates and zoom level for a zoomed-out world view
@@ -69173,11 +69173,18 @@ function addMarkersForYear(selectedYear) {
 
     if (selectedYear === 'all' || properties.Year === parseInt(selectedYear)) {
       var marker = L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]])
-        .bindPopup('Location: ' + properties.Location + '<br>Number of Fatalities: ' + properties.NumberFatalities);
+        .bindPopup('Year: ' + properties.Year + '<br>Number of Fatalities: ' + properties["Number Fatalities"] + 
+        '<br>Speed Limit: ' + properties["Speed Limit"] +
+        '<br>Age: ' + properties.Age_Fatalities+
+        '<br>Age Group: ' + properties["Age Group_Fatalities"] +
+        '<br>Gender: ' + properties.Gender_Fatalities +
+        '<br>Road Type: ' + properties["National Road Type"] 
+        );
 
       markers.addLayer(marker);
     }
   });
+  
 
   // Add the marker cluster group to the map
   map.addLayer(markers);
