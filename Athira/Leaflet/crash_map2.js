@@ -69090,16 +69090,10 @@ var crashData = {
 
 
 
-// Initialize a Leaflet map
 var map = L.map('map');
-
-// Set the initial view and fit the bounds for Australia
-var bounds = [
-  [-44, 112], // Southwest coordinates
-  [-10, 154]  // Northeast coordinates
-];
-map.setView([-25, 135], 4); // Set the initial view
-map.fitBounds(bounds);
+    
+    // Adjust the initial view coordinates and zoom level for a zoomed-out world view
+    map.setView([0, 0], 1.5); // Centered at (0,0) with a zoom level of 2
 
 // Add base layers
 var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -69143,11 +69137,18 @@ function addMarkersForYear(selectedYear) {
   map.addLayer(markers);
 }
 
+
+
 // Create a marker cluster group
 var markers = L.markerClusterGroup();
 
 // Populate the year dropdown
 var yearSelect = document.getElementById('yearSelect');
+var allYearsOption = document.createElement('option');
+allYearsOption.value = 'all';
+allYearsOption.text = 'All Years';
+yearSelect.add(allYearsOption);
+
 for (var year = 2014; year <= 2023; year++) {
   var option = document.createElement('option');
   option.value = year;
@@ -69157,9 +69158,38 @@ for (var year = 2014; year <= 2023; year++) {
 
 // Event listener for year selection
 yearSelect.addEventListener('change', function () {
-  var selectedYear = parseInt(yearSelect.value);
+  var selectedYear = yearSelect.value;
   addMarkersForYear(selectedYear);
 });
 
-// Initialize the map with the default year
-addMarkersForYear(2014);
+// Function to add markers for a specific year or all years
+function addMarkersForYear(selectedYear) {
+  // Clear existing markers
+  markers.clearLayers();
+
+  // Add markers for the selected year or all years
+  crashData.features.forEach(function (feature) {
+    var properties = feature.properties;
+
+    if (selectedYear === 'all' || properties.Year === parseInt(selectedYear)) {
+      var marker = L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]])
+        .bindPopup('Location: ' + properties.Location + '<br>Number of Fatalities: ' + properties.NumberFatalities);
+
+      markers.addLayer(marker);
+    }
+  });
+
+  // Add the marker cluster group to the map
+  map.addLayer(markers);
+}
+
+// Initialize the map with all years
+addMarkersForYear('all');
+
+// Assemble the API query URL
+let geoJSONUrl = "output_geojson.geojson";
+
+// Get the data with D3
+d3.json(geoJSONUrl).then(function (crashData) {
+  createMarkers(crashData);
+});
