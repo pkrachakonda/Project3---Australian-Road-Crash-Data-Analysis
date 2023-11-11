@@ -110,13 +110,13 @@
       <div class="chart-container">
         <div class="w3-twothird w3-center w3-padding-left">
           <h3 class="heading"><b>Overall State Fatalities from 2013 to 2023</b></h3>
-          <p> Below represents the fatalities per year per state. Click the States to remove them from the list for 
+          <p class="w3-padding"> Below represents the fatalities per year per state.<br>Click the States to remove them from the list for 
             relative comparisons per year. 
           </P>
-          <canvas id="eachStateChart"></canvas>
+          <canvas id="eachStateChart" class="chart"></canvas>
         </div>
 
-        <div class="w3-third w3-center">
+        <div class="w3-third w3-center w3-padding-">
           <h3 class="heading"><b> Summary Table </b> </h3> 
           <table class="table table-evenodd center" id="summary-table">
             <p> This is the current state record for road fatalities from 2013 to 2023 as of September 2023 </P> 
@@ -134,7 +134,7 @@
       </div>
     </div> 
 
-    <!-- Selection of Year-->
+    <!-- Selection of Yea and Headerr-->
 
     <div class="w3-container w3-margin yearly-header scrollable sticky-header" id="scrollableDiv">
       <div class="w3-container w3-purple w3-twothird w3-padding-16">
@@ -159,14 +159,16 @@
     <div class="w3-panel">
     <div class="chart-container">
       
-      <!-- First Row Graphs-->
+      <!-- Fatalities per Speed Chart -->
       <div class="w3-row-padding" style="margin:0 -16px">
         <div class="w3-half w3-padding">
-          <div class="chart-containe">
+          <div class="chart-container">
             <h5 class="heading">Fatalities per speed limit (km/h)</h5>
-            <canvas id="fatalitiesChart"></canvas>
+            <canvas id="fatalitiesChart"></canvas> <br> 
           </div>
         </div>
+
+      <!-- Road User Per Day Fatalities -->
         <div class ="w3-half w3 padding">
           <div class="chart-container">
             <h5 class="heading"> Road User Per Day </h5>
@@ -175,14 +177,16 @@
         </div>
       </div>
       
+      <!-- Per state fatalities Day/Night -->
       <div class ="w3 padding">
         <div class="chart-container">
           <h5 class="heading"> Per State Day and Night Fatalities </h5>
           <canvas id="stateChart"></canvas>
+          <p class="information"> <i>Note: Day refers to 6am through to 5:59pm and Night 6pm to 5:59am</i></p>
         </div>
       </div>
 
-              <!--Second Row Graphs-->
+       <!-- Fatalitise by Age Group -->
       <div class="w3-row-padding" style="margin:0 -16px">
         <div class="w3-half w3 padding">
           <div class="chart-container">
@@ -190,6 +194,8 @@
             <canvas id="ageGroupChart"></canvas>
           </div>
         </div>
+      
+        <!-- Fatalities per Gender --> 
         <div class ="w3-half w3 padding">
           <div class="chart-container">
             <h5 class="heading"> Fatalities by Gender </h5>
@@ -200,10 +206,13 @@
 
   <!-- End page content -->
 </div>
-
+<br>
+<!-- End information -->
 <div class="w3-container w3-dark-grey w3-padding-32">
   <div class="w3-row-padding">
     <div class="w3-container w3-third">
+
+      <!-- Contributors -->
       <h5 class="w3-bottombar w3-border-green">Contributors</h5>
       <div class="w3-button w3-padding">
         <a href="https://github.com/leedavidarmstrong">Lee David Armstrong</a>
@@ -218,17 +227,19 @@
           <a href="##">Athira</a>
       </div>
     </div>
+
+    <!-- References-->
     <div class="w3-container w3-third">
-      <h5 class="w3-bottombar w3-border-red">References</h5>
-      <p>W3schools</p>
-      <p>UWA Content</p>
-      <p>More</p>
+      <h5 class="w3-bottombar w3-border-red"> References</h5>
+      <p> <a href="https://www.w3schools.com/"> W3schools </a> </p>
+      <p> <a href="https://data.gov.au/dataset/ds-dga-5b530fb8-526e-4fbf-b0f6-aa24e84e4277/details?q=road%20fatalities%20in%20Australia">Australian Road Deaths Database (AARD) </a></p>
+      <p> <a href="https://github.com/pkrachakonda/Project3_Gr7#readme">More...</a></p>
     </div>
     <div class="w3-container w3-third">
       <h5 class="w3-bottombar w3-border-orange">Shout Outs</h5>
-      <p>Mortaza Rezae</p>
-      <p>Jeffrey Chieu</p>
-      <p>Camillo Vargas</p>
+      <p> Dr. Mortaza Rezae</p>
+      <p> Jeffrey Chieu </p>
+      <p> Camillo Vargas</p>
       <p> ChatGPT </p>
     </div>
   </div>
@@ -273,7 +284,6 @@ function w3_close() {
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="crash_map2.html"></script>
 
 <!--<script src="crash_map4.html"></script> -->
 
