@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Smashing Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- W3 School CSS and icon stylesheet-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="../static/css/style.css" rel="stylesheet">
+
+</head> 
+
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <span class="w3-bar-item w3-center"> <i class="fa fa-car fa"> Smashing Data</i></span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+    </div>
+    <div class="w3-col s12 w3-bar">
+      <span><b><h2>Welcome to Smashing Data</span></b></h2><br>
+      <p> This dashboard explores the data of fatalities and crashes around Australia between the years 2013 to 2023</p>
+      <p> Below are some further information of the dataset and information analysed </p>
+    </div>
+  <hr>
+  <div class="w3-container">
+    <h5 class="w3-dark-grey w3-padding">Menu</h5>
+  </div>
+
+  <div class="w3-bar-block sidebar-information">
+    <a href="#" class="w3-bar-item w3-button w3-padding w3-padding"><i class="material-icons">local_library</i> About the Project</a>
+    <a href="https://www.bitre.gov.au/statistics/safety/fatal_road_crash_database" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bar-chart"></i>  AARD Data Source</a>
+    <a href="http://127.0.0.1:5000/data" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  JSON Data File </a>
+    <a href="/crash_map2" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i> Leaflet Visualisation </a>
+    <a href="https://github.com/pkrachakonda/Project3_Gr7" class="w3-bar-item w3-button w3-padding"><i class="fa fa-github"></i>  GitHub Repository </a>
+  
+<!--
+      <div class="w3-margin-left">
+        <section class="sidebar" id="selection"><h4>State Selection</h4>
+            <input type="checkbox" id="stateFilterAll" name="state" value="All State" checked>
+            <label for="stateFilterAll">All states</label><br>
+    
+            <input type="checkbox" id="stateFilterWA" name="wa" value="WA">
+            <label for="stateFilterWA">Western Australia</label> <br> 
+    
+            <input type="checkbox" id="stateFilterVIC" name="vic" value="VIC">
+            <label for="stateFilterVIC">Victoria </label> <br> 
+    
+            <input type="checkbox" id="stateFilterNSW" name="nsw" value="NSW">
+            <label for="stateFilterNSW">New South Wales </label> <br> 
+    
+            <input type="checkbox" id="stateFilterQLD" name="qld" value="QLD">
+            <label for="stateFilterQLD">Queensland </label><br> 
+    
+            <input type="checkbox" id="stateFilterACT" name="act" value="ACT">
+            <label for="stateFilterACT">Australia Capital Territory</label> <br>
+    
+            <input type="checkbox" id="stateFilterSA" name="sa" value="SA">
+            <label for="stateFilterSA">South Australia</label> <br>
+    
+            <input type="checkbox" id="stateFilterTAS" name="tas" value="TAS">
+            <label for="stateFilterTAS">Tasmania</label> <br> 
+    
+            <input type="checkbox" id="stateFilterNT" name="nt" value="NT">
+            <label for="stateFilterNT">Northern Territory</label> <br> 
+        </section>
+    </div>
+  --> 
+
+    <br><br>
+    <br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h2><b><i class="fa fa-dashboard"></i> Dashboard</b></h2>
+  </header>
+
+  <!-- About the project-->
+  <div class="w3-container w3-indigo w3-margin">
+    <p> <h3><b> About the Project </h3> </b> </p> 
+    <p> <strong>64% of surveyed Australians over 18 </strong> with driver’s licenses have experienced at least one car crash. 
+        With a total of 39,755 people hospitalised due to car crashes in 2018-19, we look into some of the available data to review the demographics of road fatalities. </p>
+        <p> To further look at the statistics of road crashes and road fatalities in Australia, the
+          <a href="https://www.bitre.gov.au/statistics/safety/fatal_road_crash_database"><b>Australian Road Deaths Database </b></a> was analysed and visualisations were prepared for a more complete understanding of the demographics involved in road crashes and fatalities. </p>
+        <p> To understand the data better an <a href="https://www.bitre.gov.au/sites/default/files/documents/ardd_dictionary_sep2023.pdf"> <b>AARD Dictionary </b></a> was included to list all values that are included in the database </p>
+        <p> <h8> <i>  ** Note dataset only provided data until September 2023 ** </i></h8></p>
+    </div>
+
+    <!--All Years Each State -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="chart-container">
+        <div class="w3-twothird w3-center w3-padding-left">
+          <h3 class="heading"><b>Overall State Fatalities from 2013 to 2023</b></h3>
+          <p> Below represents the fatalities per year per state. Click the States to remove them from the list for 
+            relative comparisons per year. 
+          </P>
+          <canvas id="eachStateChart"></canvas>
+        </div>
+
+        <div class="w3-third w3-center">
+          <h3 class="heading"><b> Summary Table </b> </h3> 
+          <table class="table table-evenodd center" id="summary-table">
+            <p> This is the current state record for road fatalities from 2013 to 2023 as of September 2023 </P> 
+            <thead class="table">
+                <tr style="background-color:gainsboro;">
+                  <br>
+                    <th>State</th>
+                    <th>Fatalities</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        </div> 
+      </div>
+    </div> 
+
+    <!-- Selection of Year-->
+
+    <div class="w3-container w3-margin yearly-header scrollable sticky-header" id="scrollableDiv">
+      <div class="w3-container w3-purple w3-twothird w3-padding-16">
+          <h4> Yearly Information </h4>
+      </div>
+      <div class="w3-container w3-deep-orange w3-third w3-padding-16">
+          <label id="total-fatalities">
+              <h4>Select Year(s):</h4>
+              <select id="yearDropdown">
+                  <option value="all">All Years</option>
+              </select>
+          </label>
+      </div>
+  </div>
+  
+  
+
+    <!-- Create a catch all for errors-->
+    <div id="loadingText" style="display: none;"> Loading...</div>
+    <div id="error" style="display: none;"></div>
+
+    <div class="w3-panel">
+    <div class="chart-container">
+      
+      <!-- First Row Graphs-->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-padding">
+          <div class="chart-containe">
+            <h5 class="heading">Fatalities per speed limit (km/h)</h5>
+            <canvas id="fatalitiesChart"></canvas>
+          </div>
+        </div>
+        <div class ="w3-half w3 padding">
+          <div class="chart-container">
+            <h5 class="heading"> Road User Per Day </h5>
+            <canvas id="roadUserChart"></canvas>
+          </div>
+        </div>
+      </div>
+      
+      <div class ="w3 padding">
+        <div class="chart-container">
+          <h5 class="heading"> Per State Day and Night Fatalities </h5>
+          <canvas id="stateChart"></canvas>
+        </div>
+      </div>
+
+              <!--Second Row Graphs-->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3 padding">
+          <div class="chart-container">
+            <h5 class="heading">Fatalities by Age Group</h5>
+            <canvas id="ageGroupChart"></canvas>
+          </div>
+        </div>
+        <div class ="w3-half w3 padding">
+          <div class="chart-container">
+            <h5 class="heading"> Fatalities by Gender </h5>
+            <canvas id="genderChart" height="780" width=""></canvas>
+          </div>
+        </div> 
+    </div>  
+
+  <!-- End page content -->
+</div>
+
+<div class="w3-container w3-dark-grey w3-padding-32">
+  <div class="w3-row-padding">
+    <div class="w3-container w3-third">
+      <h5 class="w3-bottombar w3-border-green">Contributors</h5>
+      <div class="w3-button w3-padding">
+        <a href="https://github.com/leedavidarmstrong">Lee David Armstrong</a>
+      </div> <br> 
+      <div class="w3-button w3-padding">
+          <a href="https://github.com/pkrachakonda">Praveen Kumar Rachakonda</a> 
+      </div><br> 
+      <div class="w3-button w3-padding">
+          <a href="https://github.com/jflengkong">Jesslyn Faith Lengkong</a> 
+      </div> <br> 
+      <div class="w3-button w3-padding">
+          <a href="##">Athira</a>
+      </div>
+    </div>
+    <div class="w3-container w3-third">
+      <h5 class="w3-bottombar w3-border-red">References</h5>
+      <p>W3schools</p>
+      <p>UWA Content</p>
+      <p>More</p>
+    </div>
+    <div class="w3-container w3-third">
+      <h5 class="w3-bottombar w3-border-orange">Shout Outs</h5>
+      <p>Mortaza Rezae</p>
+      <p>Jeffrey Chieu</p>
+      <p>Camillo Vargas</p>
+      <p> ChatGPT </p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-16 w3-light-grey">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<!-- End page content -->
+</div>
+
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+      
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+      
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+      
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+  
+<script src="{{ url_for('static', filename='js/logic2.js') }}"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="crash_map2.html"></script>
+
+<!--<script src="crash_map4.html"></script> -->
+
+</body>
+</html>
+
+
+
+
