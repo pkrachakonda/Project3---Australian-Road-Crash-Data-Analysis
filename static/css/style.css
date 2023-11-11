@@ -5,13 +5,34 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     font-family: "Raleway";
     text-align: center;
     font-weight: bold;
+    padding-left: 20px;
 }
+
+.information {
+    font-size: 12px;
+    padding-left: 30px;
+    padding-right: 30px; 
+    text-align: center;
+}
+
+.padding {
+    padding: 40px;
+}
+
+.chart {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding-left:20px;
+  }
+  
 
 /*  Create Table Styling  */
 .table {
     font-family: "Raleway", sans-serif;
     border-collapse: collapse;
     width: 80%;
+    border-spacing: 30px;
   }
 
 .table.center {
