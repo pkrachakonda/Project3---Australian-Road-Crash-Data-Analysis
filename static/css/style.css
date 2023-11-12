@@ -1,0 +1,83 @@
+/* General Font Family for whole document */
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif} 
+
+.heading {
+    font-family: "Raleway";
+    text-align: center;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.information {
+    font-size: 12px;
+    padding-left: 30px;
+    padding-right: 30px; 
+    text-align: center;
+}
+
+.padding {
+    padding: 40px;
+}
+
+.chart {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding-left:20px;
+  }
+  
+
+/*  Create Table Styling  */
+.table {
+    font-family: "Raleway", sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    border-spacing: 30px;
+  }
+
+.table.center {
+    margin-left: auto; 
+    margin-right: auto;
+  }
+
+.table td, th {
+    border: 1px solid #D6EEEE;
+    text-align: center;
+    padding: 8px;
+  }
+  
+.table.table-evenodd{
+	border-collapse:collapse;  
+}
+table.table-evenodd tr td, th{
+	border:1px solid #ccc;
+  	padding:5px;
+}
+table.table-evenodd tr:hover:nth-child(odd){  
+    background: #ffc4c4;
+}
+table.table-evenodd tr:hover:nth-child(even){  
+    background: #b2f8ff;
+}
+
+/* Header on top of page when scrolling */
+.scrollable {
+    margin-top: 60px; 
+    padding: 20px;
+}
+
+.sticky-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 25px;
+    z-index: 100;
+}
+
+.w3-deep-orange label h4 {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+.w3-purple label h3 {
+    display: inline-block; 
+    margin-right: 10px; }
