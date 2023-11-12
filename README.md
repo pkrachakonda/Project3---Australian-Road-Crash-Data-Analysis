@@ -1,6 +1,6 @@
 # 🚗Australian Road Crash Data Analysis - 2013-2023
 
-#### ⭐ This repository contains the data analysis project on Australian road crashes from 2013 to 2023 conducted by  **Group 7: Praveen R, Lee Armstrong, Jesslyn Lengkong, and Athira Reji** for the UWA Data Analytics Bootcamp 2023. 
+#### ⭐ This repository contains the data analysis project on Australian road crashes from 2013 to 2023 conducted by  **Group 7: Praveen Rachakonda, Lee Armstrong, Jesslyn Lengkong, and Athira Reji** for the UWA Data Analytics Bootcamp 2023. 
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
