@@ -69093,7 +69093,7 @@ var crashData = {
 var map = L.map('map');
     
     // Adjust the initial view coordinates and zoom level for a zoomed-out world view
-    map.setView([0, 0], 1.5); // Centered at (0,0) with a zoom level of 2
+    map.setView([-25, 135], 4); // Centered at (-12,135) with a zoom level of 4
 
 // Add base layers
 var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

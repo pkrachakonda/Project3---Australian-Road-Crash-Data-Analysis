@@ -10,8 +10,8 @@ def dashboard():
 
 @app.route('/crash_map2')
 def leaflet_map_page():
-    return render_template('crash_map2.html')
-    # return render_template('crash_map4.html')
+    # return render_template('crash_map2.html')
+    return render_template('crash_map4.html')
     
 @app.route('/years', methods=['GET'])
 def get_years():
