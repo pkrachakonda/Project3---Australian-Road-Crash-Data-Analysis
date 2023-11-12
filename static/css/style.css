@@ -62,14 +62,14 @@ table.table-evenodd tr:hover:nth-child(even){
 
 /* Header on top of page when scrolling */
 .scrollable {
-    margin-top: 60px; 
+    margin-top: 50px; 
     padding: 20px;
 }
 
 .sticky-header {
     position: -webkit-sticky;
     position: sticky;
-    top: 25px;
+    top: 50px;
     z-index: 100;
 }
 
@@ -80,4 +80,6 @@ table.table-evenodd tr:hover:nth-child(even){
 
 .w3-purple label h3 {
     display: inline-block; 
-    margin-right: 10px; }
+    margin-right: 10px; 
+
+}

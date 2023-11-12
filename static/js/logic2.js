@@ -1,3 +1,16 @@
+// Create a functions for Side bar to open full length page 
+function w3_open() {
+    document.getElementById("main").style.marginLeft = "22%";
+    document.getElementById("mySidebar").style.width = "22%";
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("openNav").style.display = 'none';
+  }
+  function w3_close() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+  }
+
 //  Create an event listener for scrolling the header - choosing year
 window.addEventListener('scroll', function () {
     const scrollableDiv = document.getElementById('scrollableDiv'); // Get the div you want to make sticky
@@ -399,6 +412,7 @@ function updateAgeGroupChart(chart, data) {
         chart.destroy();
     }
 
+
     // Create the new pie chart
     const newChart = new Chart(ageGroupChartCtx, {
         type: 'doughnut',
@@ -411,7 +425,7 @@ function updateAgeGroupChart(chart, data) {
             ],
         },
     });
-
+    
     return newChart; // Return the updated chart instance
 }
 
