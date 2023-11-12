@@ -70,7 +70,8 @@ The database used to derive the latitudes and longitudes is [The Latitudes and L
 As part of the Extract Transform and Load (ETL) process, data was downloaded from data.gov.au (data related to road crashes) and GitHub (data related to coordinates for locations), using the requests function. As part of extracting data, all empty rows were filled with “undetermined” except for the Time and Speed columns for which “-9” was used, using Pandas. The modified Pandas DataFrame were merged by removing duplicated columns. The modified data was transformed into a sqlite3 database and loaded using SQLAlchemy. A web application (127.0.0.1:8080) was created using Flask and WSGI server and data for visualisation was extracted from the web application using the requests function and jsonified.
 
 #### Flow Diagram 
-![](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Athira/README_images/Workflow%20Diagram.png)
+
+![ARDD_FLowChart_V02](https://github.com/pkrachakonda/Project3_Gr7/assets/20739237/e23a2cbe-fb83-4b1f-ac93-497d4d198740)
 
 #### ETL stages: Linked files
 
