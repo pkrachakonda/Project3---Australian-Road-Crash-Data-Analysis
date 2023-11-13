@@ -37,7 +37,7 @@
       </div>
       <div class="w3-bar-block sidebar-information">
         <a href="#" class="w3-bar-item w3-button w3-padding w3-padding"><i class="material-icons">local_library</i> About the Project</a>
-        <a href="https://www.bitre.gov.au/statistics/safety/fatal_road_crash_database" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bar-chart"></i> ARRD Data Source</a>
+        <a href="https://www.bitre.gov.au/statistics/safety/fatal_road_crash_database" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bar-chart"></i> ARDD Data Source</a>
         <a href="http://127.0.0.1:5000/data" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i> JSON Data File </a>
         <a href="/crash_map2" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i> Leaflet Visualization </a>
         <a href="https://github.com/pkrachakonda/Project3_Gr7" class="w3-bar-item w3-button w3-padding"><i class="fa fa-github"></i> GitHub Repository </a>
@@ -61,7 +61,7 @@
             With a total of 39,755 people hospitalized due to car crashes in 2018-19, we look into some of the available data to review the demographics of road fatalities. </p>
         <p> To further look at the statistics of road crashes and road fatalities in Australia, the
           <a href="https://www.bitre.gov.au/statistics/safety/fatal_road_crash_database"><b>Australian Road Deaths Database  (ARDD) </b></a> was analyzed and visualizations were prepared for a more complete understanding of the demographics involved in road crashes and fatalities. </p>
-        <p> To understand the data better, an <a href="https://www.bitre.gov.au/sites/default/files/documents/ardd_dictionary_sep2023.pdf"> <b>ARRD Dictionary </b></a> was included to list all values that are included in the database </p>
+        <p> To understand the data better, an <a href="https://www.bitre.gov.au/sites/default/files/documents/ardd_dictionary_sep2023.pdf"> <b>ARDD Dictionary </b></a> was included to list all values that are included in the database </p>
         <p> <h8> <i>  ** Note dataset only provided data until September 2023 ** </i></h8></p>
       </div>
       <!-- All Years Each State -->
@@ -109,20 +109,15 @@
       <div class="w3-panel">
         <div class="chart-container">
           <!-- Fatalities per Speed Chart -->
-          <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-half w3-padding">
-              <div class="chart-container">
-                <h5 class="heading">Fatalities per speed limit (km/h)</h5>
-                <canvas id="fatalitiesChart"></canvas> <br> 
-              </div>
-            </div>
+          <div class="w3-row-padding" style="margin: 0 -16px">
             <!-- Road User Per Day Fatalities -->
-            <div class="w3-half w3 padding">
+            <div class="w3-padding">
               <div class="chart-container">
-                <h5 class="heading"> Road User Per Day </h5>
-                <canvas id="roadUserChart"></canvas>
+                <h5 class="heading">Road User Per Day</h5>
+                <canvas id="roadUserChart" width="30" height="10"></canvas>
               </div>
             </div>
+          </div>
           </div>
           <!-- Per state fatalities Day/Night -->
           <div class="w3 padding">
@@ -178,7 +173,7 @@
           <div class="w3-container w3-third">
             <h5 class="w3-bottombar w3-border-red"> References</h5>
             <p> <a href="https://www.w3schools.com/"> W3schools </a> </p>
-            <p> <a href="https://data.gov.au/dataset/ds-dga-5b530fb8-526e-4fbf-b0f6-aa24e84e4277/details?q=road%20fatalities%20in%20Australia">Australian Road Deaths Database (AARD) </a></p>
+            <p> <a href="https://data.gov.au/dataset/ds-dga-5b530fb8-526e-4fbf-b0f6-aa24e84e4277/details?q=road%20fatalities%20in%20Australia">Australian Road Deaths Database (ARDD) </a></p>
             <p> <a href="https://github.com/pkrachakonda/Project3_Gr7#readme">More...</a></p>
           </div>
           <div class="w3-container w3-third">

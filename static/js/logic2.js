@@ -33,7 +33,6 @@ window.addEventListener('scroll', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const yearDropdown = document.getElementById('yearDropdown');
     const roadUserChartCtx = document.getElementById('roadUserChart').getContext('2d');
-    const fatalitiesChartCtx = document.getElementById('fatalitiesChart').getContext('2d');
     const stateChartCtx = document.getElementById('stateChart').getContext('2d');
     const ageGroupChartCtx = document.getElementById('ageGroupChart').getContext('2d');
     const eachStateChartCtx = document.getElementById('eachStateChart').getContext('2d');
@@ -43,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const statesArray = ['WA', 'NSW', 'Qld', 'NT', 'Vic', 'SA', 'Tas', 'ACT'];
     
     // Initialize chart variables
-    let roadUserChart, fatalitiesChart, stateChart, stateYearChart, ageGroupChart, genderChart;
+    let roadUserChart, stateChart, stateYearChart, ageGroupChart, genderChart;
     
 
     // Fetch years and populate year dropdown
@@ -103,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function updateCharts(data, year) {
         roadUserChart = updateRoadUserChart(roadUserChart, data);
-        fatalitiesChart = updateFatalitiesChart(fatalitiesChart, data);
         stateChart = updateStateChart(stateChart, data);
         ageGroupChart = updateAgeGroupChart(ageGroupChart, data, year);
         genderChart = updateGenderChart(genderChart, data, year);  
@@ -172,69 +170,6 @@ function updateRoadUserChart(chart, data) {
 return chart; // Return the updated chart instance
 }
 
-
-// Update the Fatalities chart
-function updateFatalitiesChart(chart, data) {
-        // Group data by Speed Limit
-        const fatalitiesBySpeed = {};
-    
-        // Initialise speed limit groups
-        data.forEach(record => {
-        const speedLimit = record['Speed Limit'];
-        if(!(speedLimit in fatalitiesBySpeed)) {
-            fatalitiesBySpeed[speedLimit] = [];
-        }
-        fatalitiesBySpeed[speedLimit].push(record['Number of Fatalities']);
-        });
-    
-        // Sum fatalities by speed limit
-        const speedLimits = Object.keys(fatalitiesBySpeed);
-        const fatalitiesData = speedLimits.map(speed => {
-        return fatalitiesBySpeed[speed].reduce((a, b) => a + b, 0);
-        });
-    
-        // Check if the chart instance exists
-        if (!chart) {
-            chart = new Chart(fatalitiesChartCtx, {
-                // Chart initialisation
-                type: 'bar',
-                data: {
-            labels: speedLimits,
-            datasets: [{
-            label: 'Number of Fatalities',
-            data: fatalitiesData,
-            // Add more properties for chart formatting here
-            }]
-        },
-        options: {
-            // Chart customisation options
-            scales: {
-
-                x: {
-                    title: {
-                        text: 'Speed Limit (km/h)',
-                        display: true, 
-                    },
-                },
-
-                y: {
-                    title: { 
-                        text: 'Number of Fatalities', 
-                        display: true,
-                    }, 
-                    
-                    beginAtZero: true, 
-                }
-            }
-        }
-    });
-} else {
-    // Update chart data
-    chart.data.datasets[0].data = fatalitiesData;
-    chart.update();
-}
-return chart; 
-}
 
 
 // Update the State chart
