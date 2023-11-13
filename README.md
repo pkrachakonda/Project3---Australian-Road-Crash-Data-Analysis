@@ -46,14 +46,12 @@ The database used to derive the latitudes and longitudes is [The Latitudes and L
 4. What are the road user patterns, and how do they contribute to overall fatalities?
 5. How are fatalities distributed among different age groups?
 6. Is there a correlation between age group and the number of fatalities?
-7. What is the correlation between fatalities and speed limits? Are higher speed limits associated with more severe accidents?
-8. How do fatalities vary across different speed limit categories?
 
 ## 🪜Project Stages
 
 ### A. 💡Concept Stage
 
-![](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Athira/README_images/CC.png)
+![](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Leaflet_Analysis/README_images/CC.png)
 
 
 ### B. ⬇️🧹✂️⬆️ Extract, Transform and Load
@@ -71,7 +69,7 @@ As part of the Extract Transform and Load (ETL) process, data was downloaded fro
 
 #### Flow Diagram 
 
-![ARDD_FLowChart_V02](https://github.com/pkrachakonda/Project3_Gr7/assets/20739237/5c7a698a-1b44-44c5-87b1-81d2eb2c03cd)
+![ARDD_FLowChart_V02](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Leaflet_Analysis/README_images/Workflow%20Diagram.png)
 
 
 #### ETL stages: Linked files
@@ -84,7 +82,7 @@ As part of the Extract Transform and Load (ETL) process, data was downloaded fro
 
 - **Flask API:** [app.py](https://github.com/pkrachakonda/Project3_Gr7/blob/main/app.py)
 
-- **Creating Geojson:** [Creating Geojson](https://github.com/pkrachakonda/Project3_Gr7/tree/main/Athira)
+- **Creating Geojson:** [Creating Geojson](https://github.com/pkrachakonda/Project3_Gr7/tree/main/Leaflet_Analysis/Leaflet/Creating_Geojson)
 
 
 ### C. 📊📈📉Dashboard Development
@@ -97,11 +95,11 @@ As part of the Extract Transform and Load (ETL) process, data was downloaded fro
 
 - **Flask API:** [app.py](https://github.com/pkrachakonda/Project3_Gr7/blob/main/app.py)
 
-- **Leaflet:** [Leaflet](https://github.com/pkrachakonda/Project3_Gr7/tree/main/Athira)
+- **Leaflet:** [Leaflet](https://github.com/pkrachakonda/Project3_Gr7/tree/main/Leaflet_Analysis)
 
 #### Snapshot of the Dashboard
 
-![](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Athira/README_images/DB.png)
+![](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Leaflet_Analysis/README_images/DB.png)
 
 ## 📄Answering the Research Questions
 
@@ -120,11 +118,6 @@ As part of the Extract Transform and Load (ETL) process, data was downloaded fro
 
 `The 40-46 years age group has the most number of fatalities followed by 25-39 years, followed by 16-24 years. This analysis reveals a notable correlation between age groups and the occurrence of fatalities, emphasizing the need for age-specific safety measures.`
 
-7. **What is the correlation between fatalities and speed limits?**
-8. **How do fatalities vary across different speed limit categories?**
-
-`The number of fatalities changes with different speed limits. The 60km/hr-80km/hr range has the most number of fatalities. These findings suggest a potential correlation between speed limits and the severity of accidents, highlighting the importance of speed management for road safety.`
-
 
 ## 📑Conclusions
 
@@ -133,7 +126,6 @@ In summary,
 - the data points towards a positive trend in reducing overall state fatalities. Sustaining these improvements requires continuous monitoring.
 - Recognizing state-specific variations and understanding road user patterns are critical elements for formulating targeted strategies aimed at improving road safety.
 - Understanding the age distribution of fatalities is essential for tailoring interventions and policies to address the specific needs of different age groups, thereby contributing to overall road safety.
-- Apprehending the relationship between fatalities and speed limits is crucial for implementing effective speed control measures and enhancing overall road safety.
 
 ## 📝References
 
