@@ -82,7 +82,7 @@ As part of the Extract Transform and Load (ETL) process, data was downloaded fro
 
 - **Flask API:** [app.py](https://github.com/pkrachakonda/Project3_Gr7/blob/main/app.py)
 
-- **Creating Geojson:** [Creating Geojson](https://github.com/pkrachakonda/Project3_Gr7/tree/main/Leaflet_Analysis/Leaflet/Creating_Geojson)
+- **Creating Geojson:** [Creating Geojson](https://github.com/pkrachakonda/Project3_Gr7/tree/main/Leaflet_Analysis)
 
 
 ### C. 📊📈📉Dashboard Development
