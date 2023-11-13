@@ -63,6 +63,8 @@ As part of the Extract Transform and Load (ETL) process, data was downloaded fro
 
 ![ARDD_FLowChart_V02](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Leaflet_Analysis/README_images/Workflow%20Diagram.png)
 
+### ETL stages
+
 1. **Downloading Data:** Data retrieved from "DATA.GOV.AU" through API.
 2. **Cleaning Data:** Filling empty columns, handling -9 values, renaming columns, and merging data frames.
 3. **Database Setup:** Creating a SQLite3 database.
