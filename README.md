@@ -56,6 +56,13 @@ The database used to derive the latitudes and longitudes is [The Latitudes and L
 
 ### B. ⬇️🧹✂️⬆️ Extract, Transform and Load
 
+#### Description
+As part of the Extract Transform and Load (ETL) process, data was downloaded from data.gov.au (data related to road crashes) and GitHub (data related to coordinates for locations), using the requests function. As part of extracting data, all empty rows were filled with “undetermined” except for the Time and Speed columns for which “-9” was used, using Pandas. The modified Pandas DataFrame were merged by removing duplicated columns. The modified data was transformed into a sqlite3 database and loaded using SQLAlchemy. A web application (127.0.0.1:8080) was created using Flask and WSGI server and data for visualisation was extracted from the web application using the requests function and jsonified.
+
+#### Flow Diagram 
+
+![ARDD_FLowChart_V02](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Leaflet_Analysis/README_images/Workflow%20Diagram.png)
+
 1. **Downloading Data:** Data retrieved from "DATA.GOV.AU" through API.
 2. **Cleaning Data:** Filling empty columns, handling -9 values, renaming columns, and merging data frames.
 3. **Database Setup:** Creating a SQLite3 database.
@@ -63,13 +70,6 @@ The database used to derive the latitudes and longitudes is [The Latitudes and L
 5. **Final Database:** Incorporating cleaned and transformed data into the SQL Alchemy database.
 6. **Flask API:** Creating routes using Flask.
 7. **Creating Geojson:** Merging latitude and longitude coordinates columns to the final database.
-
-#### Description
-As part of the Extract Transform and Load (ETL) process, data was downloaded from data.gov.au (data related to road crashes) and GitHub (data related to coordinates for locations), using the requests function. As part of extracting data, all empty rows were filled with “undetermined” except for the Time and Speed columns for which “-9” was used, using Pandas. The modified Pandas DataFrame were merged by removing duplicated columns. The modified data was transformed into a sqlite3 database and loaded using SQLAlchemy. A web application (127.0.0.1:8080) was created using Flask and WSGI server and data for visualisation was extracted from the web application using the requests function and jsonified.
-
-#### Flow Diagram 
-
-![ARDD_FLowChart_V02](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Leaflet_Analysis/README_images/Workflow%20Diagram.png)
 
 
 #### ETL stages: Linked files
