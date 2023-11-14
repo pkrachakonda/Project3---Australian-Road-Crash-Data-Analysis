@@ -61,7 +61,7 @@ As part of the Extract Transform and Load (ETL) process, data was downloaded fro
 
 #### Flow Diagram 
 
-![ARDD_FLowChart_V02](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Leaflet_Analysis/README_images/Workflow%20Diagram.png)
+![ARDD_FLowChart_V02](https://github.com/pkrachakonda/Project3_Gr7/blob/main/ss/ARDD_FLowChart_V02.png)
 
 ### ETL stages in detail
 
