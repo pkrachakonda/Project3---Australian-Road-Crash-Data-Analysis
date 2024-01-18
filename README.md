@@ -51,7 +51,7 @@ The database used to derive the latitudes and longitudes is [The Latitudes and L
 
 ### A. 💡Concept Stage
 
-![](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Leaflet_Analysis/README_images/CC.png)
+![](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/blob/main/Leaflet_Analysis/README_images/CC.png)
 
 
 ### B. ⬇️🧹✂️⬆️ Extract, Transform and Load
@@ -76,15 +76,15 @@ As part of the Extract Transform and Load (ETL) process, data was downloaded fro
 
 #### ETL stages: Linked files
 
-- **Downloading Data:** , **Cleaning Data:**, **Database Setup:** [DataDownload_Cleaninng_DB-Setup.py](https://github.com/pkrachakonda/Project3_Gr7/blob/main/DataDownload_Cleaninng_DB-Setup.py)
+- **Downloading Data:** , **Cleaning Data:**, **Database Setup:** [DataDownload_Cleaninng_DB-Setup.py](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/blob/main/DataDownload_Cleaninng_DB-Setup.py)
 
-- **Setting Project Database & JSON for Visualization:** [Data_forVisualisation.py](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Data_forVisualisation.py)
+- **Setting Project Database & JSON for Visualization:** [Data_forVisualisation.py](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/blob/main/Data_forVisualisation.py)
 
-- **Final Database:** [ProjectDB_Flask.py](https://github.com/pkrachakonda/Project3_Gr7/blob/main/ProjectDB_Flask.py)
+- **Final Database:** [ProjectDB_Flask.py](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/blob/main/ProjectDB_Flask.py)
 
-- **Flask API:** [app.py](https://github.com/pkrachakonda/Project3_Gr7/blob/main/app.py)
+- **Flask API:** [app.py](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/blob/main/app.py)
 
-- **Creating Geojson:** [Creating Geojson](https://github.com/pkrachakonda/Project3_Gr7/tree/main/Leaflet_Analysis)
+- **Creating Geojson:** [Creating Geojson](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/tree/main/Leaflet_Analysis)
 
 
 ### C. 📊📈📉Dashboard Development
@@ -93,15 +93,15 @@ As part of the Extract Transform and Load (ETL) process, data was downloaded fro
 
 #### Linked Files
 
-- **Static Folder:** [static](https://github.com/pkrachakonda/Project3_Gr7/tree/main/static)
+- **Static Folder:** [static](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/tree/main/static)
 
-- **Flask API:** [app.py](https://github.com/pkrachakonda/Project3_Gr7/blob/main/app.py)
+- **Flask API:** [app.py](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/blob/main/app.py)
 
-- **Leaflet:** [Leaflet](https://github.com/pkrachakonda/Project3_Gr7/tree/main/Leaflet_Analysis)
+- **Leaflet:** [Leaflet](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/tree/main/Leaflet_Analysis)
 
 #### Snapshot of the Dashboard
 
-![](https://github.com/pkrachakonda/Project3_Gr7/blob/main/Leaflet_Analysis/README_images/DB.png)
+![](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/blob/main/Leaflet_Analysis/README_images/DB.png)
 
 ## 📄Answering the Research Questions
 
