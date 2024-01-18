@@ -101,7 +101,8 @@ As part of the Extract Transform and Load (ETL) process, data was downloaded fro
 
 #### Snapshot of the Dashboard
 
-![](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/blob/main/Leaflet_Analysis/README_images/DB.png)
+![](https://github.com/pkrachakonda/Project3---Australian-Road-Crash-Data-Analysis/blob/main/Leaflet_Analysis/README_images/DB.png)
+
 
 ## 📄Answering the Research Questions
 
