@@ -51,7 +51,7 @@ The database used to derive the latitudes and longitudes is [The Latitudes and L
 
 ### A. 💡Concept Stage
 
-![](https://github.com/pkrachakonda//Project3---Australian-Road-Crash-Data-Analysis/blob/main/Leaflet_Analysis/README_images/CC.png)
+![](https://github.com/pkrachakonda/Project3---Australian-Road-Crash-Data-Analysis/blob/main/Leaflet_Analysis/README_images/CC.png)
 
 
 ### B. ⬇️🧹✂️⬆️ Extract, Transform and Load
